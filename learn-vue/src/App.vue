@@ -1,5 +1,6 @@
 <template>
 <h1> hello {{name}}</h1>
+<div v-text="sport"></div>
 </template>
 
 <script>
@@ -10,6 +11,7 @@ export default {
   data(){
     return {
       name : "Learn",
+      sport : 'Swimming',
     }
   }
 }
