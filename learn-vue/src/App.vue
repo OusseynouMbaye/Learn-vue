@@ -11,7 +11,9 @@
     </div>
     <h2 class="underline">underline texte</h2>
     <div><h3 class="underline" v-bind:class="status">status</h3></div>
-    <h3 v-bind:class="isEating && 'eating'" >eating dinner</h3>
+    <h3 v-bind:class="isEating && 'eating'">eating dinner</h3>
+    <h2 v-bind:style="styleObject">Revolution</h2>
+    <h2></h2>
   </div>
 </template>
 
@@ -26,7 +28,12 @@ export default {
       headingId: "heading",
       isDisabled: false,
       status: "success",
-      isEating :true
+      isEating: true,
+      styleObject: {
+        color: "blue",
+        fontSize: "34px",
+        float:"right"
+      },
     };
   },
 };
@@ -44,7 +51,7 @@ export default {
 .underline {
   text-decoration: underline;
 }
-.eating{
+.eating {
   color: rgb(255, 72, 0);
 }
 </style>
