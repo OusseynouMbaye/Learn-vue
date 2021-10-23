@@ -12,8 +12,19 @@
     <h2 class="underline">underline texte</h2>
     <div><h3 class="underline" v-bind:class="status">status</h3></div>
     <h3 v-bind:class="isEating && 'eating'">eating dinner</h3>
+    <!-- bind style with object methode -->
     <h2 v-bind:style="styleObject">Revolution</h2>
-    <h2></h2>
+    <!-- bind style with array methode -->
+  
+      <div>
+        <h2 :style="[baseStyleObject, successStyleObject]">
+          succes array
+        </h2>
+        <h2 :style="[baseStyleObject, dangerStyleObject]">
+          danger array
+        </h2>
+      </div>
+   
   </div>
 </template>
 
@@ -32,7 +43,21 @@ export default {
       styleObject: {
         color: "blue",
         fontSize: "34px",
-        float:"right"
+        // float: "right",
+      },
+      baseStyleObject: {
+        fontSize: "50px",
+        padding: "10px",
+      },
+      successStyleObject: {
+        color: "green",
+        backgroundColor: "lightgreen",
+        border: "1px solid green",
+      },
+       dangerStyleObject: {
+        color: "red",
+        backgroundColor: "darkred",
+        border: "1px solid red",
       },
     };
   },
